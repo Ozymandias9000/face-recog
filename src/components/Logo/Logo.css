@@ -1,0 +1,12 @@
+.Tilt {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	font-size: 2em;
+	background: linear-gradient(to right, rgb(197, 114, 73), rgb(148, 186, 251));
+}
+
+.Tilt img {
+	padding-top: 10px;
+}

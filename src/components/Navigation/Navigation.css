@@ -1,0 +1,11 @@
+nav {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.25em;
+	height: 0px;
+}
+
+.signOut {
+	font-size: 1.25em;
+	cursor: pointer;
+}
