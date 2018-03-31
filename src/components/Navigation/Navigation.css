@@ -5,7 +5,13 @@ nav {
 	height: 0px;
 }
 
-.signOut {
+nav p {
 	font-size: 1.25em;
+	padding-left: 1.25em;
 	cursor: pointer;
+}
+
+nav p:hover {
+	transition: all 0.2s;
+	color: white;
 }

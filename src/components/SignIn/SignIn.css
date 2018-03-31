@@ -1,0 +1,75 @@
+/*https://codepen.io/rawbenny/pen/KrGny*/
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #eceeee;
+  border: 1px solid #42464b;
+  border-radius: 6px;
+  margin: 80px auto 0 auto;
+  padding: 20px 0 20px 0;
+  width: 298px;
+  box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.4);
+}
+.login h1 {
+  font: 600 40px/1 'Roboto', sans-serif;
+  color: grey;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2), 0 1px 0 #fff;
+}
+
+.login > #username, #password, #email {
+  border: 1px solid #a1a3a3;
+  border-radius: 4px;
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  color: #696969;
+  height: 40px;
+  margin: 8px 0 8px 0;
+  padding-left: 37px;
+  transition: box-shadow 0.3s;
+  width: 240px;
+}
+.login > #username:focus, #password:focus, , #email:focus {
+  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+  outline: 0;
+}
+.forgot {
+  color: #7f7f7f;
+  font: 12px/1 sans-serif;
+  text-decoration: none;
+  margin-right: -40%;
+}
+.forgot:hover, input[type="submit"]:hover, button:hover { 
+  color: #3b3b3b;
+  transition: all 0.3s; 
+}
+.login > input[type="submit"], button {
+  width:240px;
+  height:35px;
+  font-family:'Roboto', "Courier New", sans-serif;
+  font-size:16px;
+  font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:1px 1px 0px #37a69b;
+  padding-top:6px;
+  margin: 16px 0 8px 0;
+  position:relative;
+  cursor:pointer;
+  border: none;  
+  background-color: #37a69b;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 10px 5px #999;
+}
+.login > input[type="submit"]:active, button {
+  top:3px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
+}
+::-moz-focus-inner {
+  border: 0;
+}
