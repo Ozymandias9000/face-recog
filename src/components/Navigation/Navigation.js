@@ -5,14 +5,14 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
 		if (isSignedIn) {
 			return (
 				<nav>
-					<p onClick={() => onRouteChange('signin') } className='signOut'>Sign Out</p>
+					<p onClick={() => onRouteChange('signout') } className='signOut'>Sign Out</p>
 				</nav>
 				)
 		} else { 
 			return (
 				<nav>
-					<p onClick={() => onRouteChange('home') } className='signIn'>Sign In</p>
-					<p onClick={() => onRouteChange('home') } className='signOut'>Register</p>
+					<p onClick={() => onRouteChange('signin') } className='signIn'>Sign In</p>
+					<p onClick={() => onRouteChange('register') } className='signOut'>Register</p>
 				</nav>
 				)
 		}

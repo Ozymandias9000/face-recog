@@ -11,8 +11,6 @@
 
 .ImageLinkForm input {
 	padding: .5em;
-	margin: 10px;
-	margin-right: 0px;
 	width: 70%;
 
 }
@@ -20,19 +18,29 @@
 .ImageLinkForm button {
 	padding: .5em;
 	font-size: 1em;
+	text-decoration:none;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:1px 1px 0px #37a69b;
+	border: none;
 	color: white;
 	width: 20%;
 	min-width: 75px;
-	margin: 10px;
-	margin-left: 0px;
+	font-family:'Roboto', "Courier New", sans-serif;
 	background: #DA03AA;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 5px 3px #999;
+}
+
+.ImageLinkForm button:active {
+	margin-top: 5px;
+	transition: all 0.1s;
 }
 
 .ImageLinkForm .center {
-	justify-content: center;
 	width: 70%;
+	min-height: 60px;
 	min-width: 300px;
-	display: flex;
 	border-radius: 5px;
 	box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.4);
 	/* Honeycomb by */
