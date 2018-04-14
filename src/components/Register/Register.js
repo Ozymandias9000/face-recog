@@ -47,24 +47,31 @@ onSubmitSignIn = () => {
 			<div>
 				<div className="login">
 					<h1>Register</h1>
+					Name <br />
 					<input 
 				  	type="text" 
 				  	placeholder="Name" 
 				  	id="name"
 				  	onChange={this.onNameChange} 
 				  />  
+				  <label>
+				  Email <br />
 				  <input 
 				  	type="email" 
 				  	placeholder="Email Address" 
 				  	id="email"
 				  	onChange={this.onEmailChange} 
-				  />  
+			  	/>  
+			  	</label>
+			  	<label> 
+		  		Password <br />
 				  <input 
 				  	type="password" 
 				  	placeholder="Password" 
 				  	id="password" 
 				  	onChange={this.onPasswordChange}
 				  />  
+				  </label>
 				  <input 
 				  	type="submit" 
 				  	onClick={ this.onSubmitSignIn }

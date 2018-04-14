@@ -41,21 +41,28 @@ onSubmitSignIn = () => {
 			<div>
 				<div className="login">
 					<h1>Sign In</h1>
-			    <input 
-			    	type="email" 
-			    	placeholder="Email Address" 
-			    	id="email"
-			    	name='email'
-			    	onChange={ this.onEmailChange } 
-			    />  
-				  <input 
-				  	type="password" 
-				  	placeholder="Password" 
-				  	name='password'
-				  	id="password" 
-				  	onChange={ this.onPasswordChange }
-				  />  
-				  <a href="" 
+					<label>
+						Email
+						<br />
+				    <input 
+				    	type="email" 
+				    	placeholder="Email Address" 
+				    	id="email"
+				    	name='email'
+				    	onChange={ this.onEmailChange } 
+				    />
+			    </label>
+			  	<label> 
+			  		Password 	  
+				  	<input 
+					  	type="password" 
+					  	placeholder="Password" 
+					  	name='password'
+					  	id="password" 
+					  	onChange={ this.onPasswordChange }
+					  />
+			  	</label>  
+			  	<a href="" 
 				  	className="forgot">
 				  	forgot password?
 				  </a>
