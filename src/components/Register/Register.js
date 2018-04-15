@@ -27,6 +27,7 @@ onSubmitSignIn = () => {
 	fetch('https://git.heroku.com/cryptic-ravine-28032.git/register', {
 		method: 'post',
 		headers: {'Content-Type': 'application/json'},
+		mode: 'cors',
 		body: JSON.stringify({
 			email: this.state.email,
 			name: this.state.name,
