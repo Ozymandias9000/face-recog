@@ -24,10 +24,9 @@ class Register extends React.Component {
 	}
 
 onSubmitSignIn = () => {
-	fetch('https://git.heroku.com/cryptic-ravine-28032.git/register', {
+	fetch('https://cryptic-ravine-28032.herokuapp.com/register', {
 		method: 'post',
-		headers: {'Content-Type': 'application/json',
-							'Access-Control-Allow-Origin': '*'},
+		headers: {'Content-Type': 'application/json'},
 		body: JSON.stringify({
 			email: this.state.email,
 			name: this.state.name,
@@ -40,7 +39,8 @@ onSubmitSignIn = () => {
 				this.props.loadUser(user);
 				this.props.onRouteChange('home');
 			}
-		});
+		})
+		.catch(err => console.log());
 	}
 
 	render() {
