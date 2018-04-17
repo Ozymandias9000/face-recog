@@ -62,6 +62,7 @@ loadUser = (data) => {
   };
 
   onSubmit = () => {
+    debugger;
     this.setState({ imageUrl: this.state.input });
     fetch('https://cryptic-ravine-28032.herokuapp.com/imageurl', {
       method: 'post',
@@ -93,13 +94,13 @@ loadUser = (data) => {
   };
 
   onRouteChange = (route) => {
-    (route === 'signout') 
-    ? this.setState(initialState)
-    : ((route === 'home') 
-      ? this.setState({isSignedIn: true})
-      : false);
+    if (route === 'signout') {
+      this.setState(initialState)
+    } else if (route === 'home') {
+      this.setState({isSignedIn: true})
+    }
     this.setState({ route });
-  };
+  }
 
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
