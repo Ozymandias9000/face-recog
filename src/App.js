@@ -40,6 +40,7 @@ loadUser = (data) => {
 }
 
   calculateFaceLocation = (data) => {
+    console.log('1', data)
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputImage');
     const width = Number(image.width);
@@ -54,7 +55,6 @@ loadUser = (data) => {
 
   displayFaceBox = (box) => {
     this.setState({ box });
-    console.log(box);
   };
 
   onInputChange = (e) => {
@@ -86,6 +86,7 @@ loadUser = (data) => {
           })
           .catch(console.log)
       }
+      console.log('2', res);
       this.displayFaceBox(this.calculateFaceLocation(res))
     })
     .catch(err => console.log(err));
