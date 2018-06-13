@@ -2,12 +2,14 @@ nav {
 	display: flex;
 	justify-content: flex-end;
 	flex: 1;
+	background: linear-gradient(to right, rgb(255, 255, 255), rgb(227, 197, 255));
 }
 
 nav p {
 	font-size: 1.25em;
 	padding-right: 1.5em;
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 nav p:hover {

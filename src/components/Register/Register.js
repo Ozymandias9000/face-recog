@@ -24,7 +24,7 @@ class Register extends React.Component {
 	}
 
 onSubmitSignIn = () => {
-	fetch('http://localhost:3000/register', {
+	fetch('https://cryptic-ravine-28032.herokuapp.com/register', {
 		method: 'post',
 		headers: {'Content-Type': 'application/json'},
 		body: JSON.stringify({
@@ -35,11 +35,12 @@ onSubmitSignIn = () => {
 	})
 		.then(res => res.json())
 		.then(user => {
-			if (user) {
+			if (user.id) {
 				this.props.loadUser(user);
 				this.props.onRouteChange('home');
 			}
-		});
+		})
+		.catch(err => console.log());
 	}
 
 	render() {
@@ -47,24 +48,31 @@ onSubmitSignIn = () => {
 			<div>
 				<div className="login">
 					<h1>Register</h1>
+					Name <br />
 					<input 
 				  	type="text" 
 				  	placeholder="Name" 
 				  	id="name"
 				  	onChange={this.onNameChange} 
 				  />  
+				  <label>
+				  Email <br />
 				  <input 
 				  	type="email" 
 				  	placeholder="Email Address" 
 				  	id="email"
 				  	onChange={this.onEmailChange} 
-				  />  
+			  	/>  
+			  	</label>
+			  	<label> 
+		  		Password <br />
 				  <input 
 				  	type="password" 
 				  	placeholder="Password" 
 				  	id="password" 
 				  	onChange={this.onPasswordChange}
 				  />  
+				  </label>
 				  <input 
 				  	type="submit" 
 				  	onClick={ this.onSubmitSignIn }
